@@ -1,6 +1,88 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;
 
-400;500;700;800&display=swap);@charset "UTF-8";
+400;500;700;800&display=swap);@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined);.shimmer-line {
+    height: 10px;
+    margin-top: 20px;
+    background: #777;
+}
+
+.shimmer-line-br {
+    border-radius: 8px;
+}
+.shimmer-line-full {
+    width: 100%;
+}
+.shimmer-line-80 {
+    width: 80%;
+}
+.shimmer-line-60 {
+    width: 60%;
+}
+.shimmer-line-40 {
+    width: 40%;
+}
+.shimmer-line-20 {
+    width: 20%;
+}
+.shimmer-line-10 {
+    width: 10%;
+}
+
+.shimmer-circle {
+    background: #777;
+    border-radius: 50%;
+}
+
+.shimmer-circle-lg {
+    height: 129px;
+    width: 129px;
+}
+
+.shimmer-circle-md {
+    height: 65px;
+    width: 65px;
+}
+
+.shimmer-circle-sm {
+    height: 33px;
+    width: 33px;
+}
+
+.shimmer-circle-x-sm {
+    height: 17px;
+    width: 17px;
+}
+
+
+.shimmer-wrapper {
+    width:100%;
+    height:100%;
+    animation: shimmer-full-view 0.5s forwards cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+@keyframes shimmer-full-view {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes shimmer-animation {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer-animate {
+    animation : shimmer-animation 2s infinite linear;
+    background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
+    background-size: 1000px 100%;
+}@charset "UTF-8";
 
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
@@ -12541,5 +12623,152 @@ html,
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
+  padding: 0;
+}
+
+.bg-sm {
+  background: rgb(255, 233, 228);
+  background: linear-gradient(0deg, rgb(255, 233, 228) 0%, rgb(255, 240, 240) 58%);
+}
+
+.logo {
+  width: 80px;
+}
+
+.feed-header {
+  font-size: 20px;
+}
+
+.username {
+  font-size: 15px;
+}
+
+.user-profile img,
+.feed-user-img img {
+  width: 40px;
+  height: 40px;
+  border-radius: 35%;
+}
+
+.feed-boxes {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 15px 15px 8px 15px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+
+.feed-boxes:last-child {
+  margin-bottom: 25px !important;
+}
+
+.feed-content-section {
+  max-height: 100vh;
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.feed-content-section::-webkit-scrollbar {
+  display: none;
+}
+
+.feed-content {
+  padding-left: 15px;
+}
+
+.feed-content .name {
+  font-weight: bold;
+}
+
+.feed-content .feed {
+  font-size: 13px;
+}
+
+.feed-content .feed-pill-section {
+  display: flex;
+}
+
+.feed-content .feed-pill-section .badge {
+  font-size: 11px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 15px;
+}
+
+.feed-content .feed-action {
+  display: flex;
+  align-items: center;
+}
+
+.feed-content .feed-action div {
+  font-size: 15px;
+}
+
+.feed-content .feed-action span {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.feed-votes {
+  line-height: 15px;
+}
+
+.feed-votes span {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.feed-votes span.no-votes {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.shimmer-circle {
+  border-radius: 35% !important;
+}
+
+/** Loader Section */
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #333333;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #333333 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
